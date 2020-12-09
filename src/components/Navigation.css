@@ -1,0 +1,30 @@
+/* nav.css */
+
+nav {
+  position: fixed;
+  top: 0;
+  height: 90px;
+  width: 100%;
+  background-color: #333333;
+  background-image: linear-gradient(90deg,#343942,#2e3542);
+  color: #FFFFFF;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 3px 6px #181b234f;
+  z-index: 1;
+}
+
+nav .logo {
+  font-family: 'Bungee', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+}
+
+nav .button-new {
+  text-align: center;
+}
+
+nav .button .icon {
+  color: rgb(108, 189, 255);
+}

@@ -1,0 +1,52 @@
+/* header.css */
+
+#header-main-profile {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1em;
+  background: rgb(0, 245, 151);
+  box-shadow: 1px 3px 11px #0000001f;
+  margin-top: 120px;
+  zoom: 0.75;
+}
+
+#header-main-profile .profile-image {
+  background-color: white;
+  height: 256px;
+  width: 256px;
+  border-radius: 100%;
+  -webkit-filter: drop-shadow(2px 3px 8px rgba(0,0,0,0.35));
+  overflow: hidden;
+}
+
+#header-main-profile h2 {
+  color: white;
+  letter-spacing: -0.03em;
+  -webkit-filter: drop-shadow(2px 3px 8px rgba(0,0,0,0.35));
+}
+
+
+/* --------- Responsive Design Rules ---------- */
+
+@media (min-width: 500px) {
+  header#header-main-profile {
+    margin-top: 90px;
+    zoom: 1;
+  }
+}
+
+@media (min-width: 1440px) {
+  header#header-main-profile {
+    height: 100%;
+    width: 37vw;
+    align-items: flex-end;
+    padding-right: 2em;
+    position: fixed;
+  }
+  #header-main-profile figure.profile-image {
+    border-radius: 0.7rem;
+  }
+}

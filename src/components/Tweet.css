@@ -1,0 +1,66 @@
+/* post.css */
+
+article.post {
+  border: 1px solid rgba(0,0,0,0.2);
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  box-shadow: none;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  margin-bottom: 0.25rem;
+  padding: 1.5rem 1.5rem;
+}
+
+article.post:hover {
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0.75em 2em -0.125em rgb(10 10 10 / 0.15), 0 0px 2px 1px rgb(10 10 10 / 0.06);
+}
+
+article.post header {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.post header .profile-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+img.profile-avatar {
+  border-radius: 50%;
+  border: 1px solid #00000033;
+}
+
+article.post .profile-username{
+  color: #a7a7a7;
+}
+article.post:hover .profile-username{
+  color: #4a4a4a;
+}
+
+article.post .post-body {
+  border-bottom: 1px solid #000000;
+  overflow-wrap: break-word;
+}
+
+article.post footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.post footer .post-actions .fa-md {
+  height: 1em;
+  padding: 0 0.25em;
+}
+
+/* --------- Responsive Design Rules ---------- */
+
+@media (min-width: 500px) {
+  article.post {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: .4rem;
+    margin-bottom: 0.75rem;
+  }
+}

@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+/* --------- User Style Rules ---------- */
+
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+ html {
+  box-sizing: border-box;
+  background-color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  font-size: 20px;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*
+ * Global layout stuff
+ */
+
+ body > * {
+  flex-shrink: 0;
+}
+
+body {
+  height: auto;
+  width: 100%;
+  color: #545149;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+div#meta-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+main#page-content {
+  margin-top: -1em;
+  width: 100%;
+  max-width: 960px;
+  align-self: center;
+  flex-grow: 1;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#postlist {
+  margin-bottom: 2em;
+}
+
+/* button-top */
+
+#button-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1.5rem;
+  z-index: 1500;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+
+/* --------- Responsive Design Rules ---------- */
+
+@media (min-width: 500px) {
+  html, body {
+    font-size: 24px;
   }
-  to {
-    transform: rotate(360deg);
+  main#page-content {
+    width: 90vw;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  div#meta-container {
+    flex-direction: row;
+  }
+  main#page-content {
+    margin-top: 120px;
+    padding-left: 2rem;
+    margin-left: 37vw;
   }
 }

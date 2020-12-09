@@ -1,0 +1,96 @@
+/* compose.css */
+
+section.compose {
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: 0;
+  border-right: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+section.compose:hover {
+  animation: shake 0.85s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: rotate(0deg);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+    transform: rotate(0.125deg);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+    transform: rotate(-0.3deg);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+    transform: rotate(0.3deg);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+    transform: rotate(-0.125deg);
+  }
+}
+
+section.compose #tweet-message {
+  height: 1.5em;
+}
+
+section.compose .form-textinput {
+  display: flex;
+  flex-direction: column;
+}
+
+section.compose .form-textinput textarea {
+  border: 0;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  height: 1.5em;
+  margin-top: 1.2em;
+  background-color: transparent;
+}
+
+section.compose .form-textinput textarea:focus {
+  border: 0;
+  border-bottom: 1px solid #000000;
+}
+
+section.compose .form-extrabits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Bungee", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+section.compose .form-extrabits .button {
+  font-family: "Bungee", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 2.25rem;
+}
+
+.negative {
+  color: red;
+}
+
+/* --------- Responsive Design Rules ---------- */
+
+@media (min-width: 500px) {
+  section.compose {
+    border-radius: 0.4rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 1440px) {
+  section.compose {
+    box-shadow: 2px 12px 30px #0000004f;
+  }
+}
